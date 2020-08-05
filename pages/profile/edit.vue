@@ -1,20 +1,24 @@
 <template>
   <v-row>
-    <v-col cols="4">
-      <v-avatar
-        class="profile"
-        color="grey"
-        size="164"
-        tile
-      >
-        <v-img :src="img"></v-img>
-      </v-avatar>
-      <v-container class="mt-4">
+    <v-col cols="3">
+      <v-row justify="center">
+        <v-avatar
+          class="profile"
+          color="grey"
+          size="164"
+          tile
+        >
+          <v-img :src="img"></v-img>
+        </v-avatar>
+      </v-row>
+      <v-row class="mt-4" justify="center">
         <v-btn class=" align-self-center" :to="{ name: 'profile-view' }">Отменить</v-btn>
-        <v-btn @click="save" class="mt-3">Сохранить</v-btn>
-      </v-container>
+      </v-row>
+      <v-row class="mt-4" justify="center">
+        <v-btn @click="save">Сохранить</v-btn>
+      </v-row>
     </v-col>
-    <v-col cols="8">
+    <v-col cols="6">
       <v-text-field
         v-model.trim="img"
         label="Аватар"
